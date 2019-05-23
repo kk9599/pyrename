@@ -4,6 +4,13 @@ import glob
 
 base_file = r'D:\E-Learning\Mastering Redux\9781789535839'
 
+# todo:
+#  1. create title rename func
+#  2. create func look for the folder if the folder name match number.zip
+#     unzip the file , rename it with the title of the folder
+#  3. rename the video selected
+#  4. upload the video to the server , clean up the hard drive
+
 
 def get_vide_and_title(htmlFile=''):
     temp_file = base_file + '\Package\index.html'
@@ -48,6 +55,7 @@ def changeName():
     video_path = video_path.replace('\\', '/')
     file_name = [os.path.basename(x) for x in glob.glob(video_path)]
     return file_name
+
 
 
 if __name__ == "__main__":
